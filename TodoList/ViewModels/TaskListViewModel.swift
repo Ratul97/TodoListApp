@@ -29,8 +29,8 @@ class TaskListViewModel: ObservableObject {
         tasks.move(fromOffsets: indexSet, toOffset: index)
     }
     
-    func saveNewTask(_ title: String) {
-        tasks.append(TaskModel(title: title, isCompleted: false))
+    func saveNewTask(_ title: String, _ taskDetails: String?, _ taskPriority: TaskModel.TaskPriority, _ date: String) {
+        tasks.append(TaskModel(title: title, details: taskDetails, isCompleted: false, priority: taskPriority, date: date))
     }
     
     func updateTask(_ task: TaskModel) {

@@ -25,6 +25,7 @@ struct TaskListView: View {
                         } label: {
                             TaskCellView(task: task)
                         }
+                        .listRowSeparator(.hidden)
                     }
                     .onDelete(perform: viewModel.onDelete)
                     .onMove(perform: viewModel.onMove)

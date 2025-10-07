@@ -42,8 +42,6 @@ struct NoTaskAvailableView: View {
                         .scaleEffect(isAnimating ? 0.85 : 1.0)
                         .offset(y: isAnimating ? -10 : 0)
                         .shadow(color: isAnimating ? Color.red.opacity(0.3) : Color.green.opacity(0.3), radius: 4, x: 0, y: 8)
-                        
-                        
                 }
                 .padding()
                 .onAppear(perform: animateButton)
